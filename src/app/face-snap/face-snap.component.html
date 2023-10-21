@@ -1,0 +1,6 @@
+<h2>{{ facesnap.title }}</h2>
+<p>{{ facesnap.description }}</p>
+<img [src]="facesnap.imageUrl" [alt]="facesnap.title">
+<p>poster le {{ facesnap.dateCreation }}</p>
+<p><button (click)="onSnap()">{{ button }}</button> 🤣{{ facesnap.snap }}</p>
+
