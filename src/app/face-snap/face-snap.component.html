@@ -1,6 +1,11 @@
-<h2>{{ facesnap.title }}</h2>
-<p>{{ facesnap.description }}</p>
-<img [src]="facesnap.imageUrl" [alt]="facesnap.title">
-<p>poster le {{ facesnap.dateCreation }}</p>
-<p><button (click)="onSnap()">{{ button }}</button> 🤣{{ facesnap.snap }}</p>
+<div class="face-snap-card" [ngClass]="{snapped: button==='Tks Snap'}" >
+    <h2>{{ facesnap.title|titlecase }}</h2>
+    <p>{{ facesnap.description }}</p>
+    <img [src]="facesnap.imageUrl" [alt]="facesnap.title">
+    <p>poster le {{ facesnap.dateCreation }}</p>
+    <p *ngIf="facesnap.localisation==='kara'">localiser a  {{ facesnap.localisation }}</p>
+    <p [ngStyle]="{color: 'rgb('+ facesnap.snap +',0,0 )'}"><button (click)="onSnap()" >{{ button }}</button> 🤣{{ facesnap.snap }}</p>
+</div>
+
+
 

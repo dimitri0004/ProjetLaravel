@@ -8,18 +8,39 @@ import { snapModels } from './models/snapModels';
 })
 export class AppComponent implements OnInit{
  
-  postSnap! : snapModels;
+  postSnap! : snapModels[];
+  /*mySnap! : snapModels;
+  myOtherSnap! : snapModels;
+  myLastSnap! : snapModels;*/
 
   ngOnInit() {
-    this.postSnap=new snapModels(
-      "Meuble",
-      "ce Meuble est tellement jolie qu'il m'en faudrais dans ma chambe",
-      "https://media.gettyimages.com/id/1293762741/fr/photo/int%C3%A9rieur-moderne-de-salle-de-vie-rendu-3d.jpg?s=612x612&w=0&k=20&c=BKixm6wq1Y6NFFF-8XllknUQvSboRmCmjn_Lm_erHmQ=",
-      new Date(),
-      3
-    );
+    this.postSnap = [
+      {
+      title: 'Archibald',
+      description: 'Mon meilleur ami depuis tout petit !',
+      imageUrl: 'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
+      dateCreation: new Date(),
+      localisation:"kara",
+      snap: 500
+    },
+    {
+      title: 'Three Rock Mountain',
+      description: 'Un endroit magnifique pour les randonnées.',
+      imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg',
+      dateCreation: new Date(),
+      snap: 0
+    },
+    {
+      title: 'Un bon repas',
+      description: 'Mmmh que c\'est bon !',
+      imageUrl: 'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
+      dateCreation: new Date(),
+      localisation:"lome",
+      snap: 0
+    }
 
-      
+  ]   ;
   }
+ 
 
 }
